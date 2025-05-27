@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Funnel Sans";
+    /* box-sizing: border-box; */
+}
+/* variáveis para guardar valores do css */
+:root {
+     --cor-01: #000;
+     --cor-02: #06c;
+     --cor-03: #ccc;
+     --cor-04: #fff;
+}
+
+
+body {
+    padding-top: 100px;
+}
+
+.container {
+    /* centralizar o site */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#cabecalho {
+    background-color: #000;
+    margin-bottom: 30px;
+    /* fixar o cabecalho na tela, quando rolar para baixo */
+    position: fixed;
+    top: 0px;
+    /* para ficar sobre o cabeçalho */
+    z-index: 1;
+    width: 100%;
+}
+
+#cabecalho #logo {
+    width: 30px;
+
+}
+
+#cabecalho .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu ul {
+    display: flex;
+}
+
+#menu ul li {
+    display: flex;
+    list-style: none;
+}
+
+#menu .submenu {
+    display: none;
+    /* para flutuar */
+    position: absolute;
+    z-index: 1;
+    background-color: var(--cor-01);
+}
+
+#menu ul li a {
+    color: var(--cor-04) ;
+    text-decoration: none;
+    display: block;
+    padding: 20px 30px;
+    /* suavizar a mudança de cor */
+    transition: all .3s linear;
+   
+}
+
+
+#menu ul li a:hover {
+    /* hover é pra mudar a cor, quando voce passa o mouse encima */
+    background-color: var(--cor-02);
+}
+
+#menu ul li:hover  .submenu {
+    /* submenu, para as opções aparecerem */
+    display: block;
+}
+
+
+.conteudo .titulo {
+    text-align: center;
+    margin: 30px;
+    font-size: 50px;
+
+}
+
+
+#historia img {
+    width: 400px;
+    /* flutuar a imagem no texto, ao lado direito ou esquerdo */
+    float: left;
+    border-radius: 30px ;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+
+#historia p {
+    /* justificar o alinhamento */
+    text-align: justify;
+    margin-bottom: 15px;
+
+}
+
+#fotos #galeria {
+    display: grid;
+    /* para ter colunas */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* espaçamento entre as fotos */
+    gap: 30px;
+}
+/* para as fotos ficarem responsivas */
+#fotos #galeria img{
+    width: 100%;
+    /* suavizar a transição */
+    transition: all .2s linear;
+}
+
+#fotos #galeria img:hover {
+    /* para dar um zoom na foto quando passar o mouse encima */
+    transform: scale(1.1);
+}
+
+#videos #galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+#rodape {
+    background-color: #000;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+
+#rodape a {
+    color: #fff;
+    /* anular a linha do link */
+    text-decoration: none;
+
+}
+
+#rodape a:hover {
+    /* quando passar o mouse encima, ele ficar azul */
+    text-decoration: underline;
+    color: var(--cor-02);
+}
